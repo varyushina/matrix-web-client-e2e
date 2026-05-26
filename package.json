@@ -1,0 +1,15 @@
+{
+  "name": "matrix-web-client-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "verify": "node --check playwright.config.js && node --check tests/messenger_message_visibility.spec.js && node --check pages/login_page.js && node --check pages/room_page.js && node --check pages/message_page.js && node --check support/env.js && node --check support/selectors.js && node --check support/test_data.js && node scripts/verify_selectors.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
